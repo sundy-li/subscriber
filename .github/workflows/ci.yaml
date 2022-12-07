@@ -54,5 +54,5 @@ jobs:
         uses: exuanbo/actions-deploy-gist@v1
         with:
           token: ${{ secrets.TOKEN }}
-          gist_id: <your_gist>
+          gist_id: a5e30fa8a8eb35df73ce8d2846c0fa93
           file_path: ${{ matrix.type }}.yaml
