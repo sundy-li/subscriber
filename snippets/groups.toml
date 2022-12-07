@@ -1,0 +1,145 @@
+[[custom_groups]]
+name = "🚀 节点选择"
+type = "select"
+rule = ["[]🇭🇰 香港节点", "[]🇨🇳 台湾节点", "[]🇸🇬 狮城节点", "[]🇯🇵 日本节点", "[]🇺🇲 美国节点", "[]🇰🇷 韩国节点"]
+
+[[custom_groups]]
+name = "🛑 全球拦截"
+type = "select"
+rule = ["[]REJECT"]
+
+[[custom_groups]]
+name = "🎯 全球直连"
+type = "select"
+rule = ["[]DIRECT"]
+
+[[custom_groups]]
+name = "🐟 漏网之鱼"
+type = "select"
+rule = ["[]🚀 节点选择"]
+
+[[custom_groups]]
+name = "🇭🇰 香港节点"
+type = "select"
+rule = ["[]🇭🇰 香港测速", "[]🇭🇰 香港手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇭🇰 香港测速"
+type = "url-test"
+rule = ["(港|HK|Hong Kong)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇭🇰 香港手动"
+type = "select"
+rule = ["(港|HK|Hong Kong)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇯🇵 日本节点"
+type = "select"
+rule = ["[]🇯🇵 日本测速", "[]🇯🇵 日本手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇯🇵 日本测速"
+type = "url-test"
+rule = ["(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇯🇵 日本手动"
+type = "select"
+rule = ["(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇺🇲 美国节点"
+type = "select"
+rule = ["[]🇺🇲 美国测速", "[]🇺🇲 美国手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇺🇲 美国测速"
+type = "url-test"
+rule = ["(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇺🇲 美国手动"
+type = "select"
+rule = ["(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇨🇳 台湾节点"
+type = "select"
+rule = ["[]🇨🇳 台湾测速", "[]🇨🇳 台湾手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇨🇳 台湾测速"
+type = "url-test"
+rule = ["(台|新北|彰化|TW|Taiwan)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇨🇳 台湾手动"
+type = "select"
+rule = ["(台|新北|彰化|TW|Taiwan)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇸🇬 狮城节点"
+type = "select"
+rule = ["[]🇸🇬 狮城测速", "🇸🇬 狮城手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇸🇬 狮城测速"
+type = "url-test"
+rule = ["(新加坡|坡|狮城|SG|Singapore)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇸🇬 狮城手动"
+type = "select"
+rule = ["(新加坡|坡|狮城|SG|Singapore)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇰🇷 韩国节点"
+type = "select"
+rule = ["[]🇰🇷 韩国测速", "[]🇰🇷 韩国手动"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇰🇷 韩国测速"
+type = "url-test"
+rule = ["(KR|Korea|KOR|首尔|韩|韓)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "🇰🇷 韩国手动"
+type = "select"
+rule = ["(KR|Korea|KOR|首尔|韩|韓)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300

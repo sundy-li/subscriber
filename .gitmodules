@@ -1,0 +1,4 @@
+[submodule "acl4ssr"]
+	path = acl4ssr
+	url = https://github.com/ACL4SSR/ACL4SSR.git
+	branch = master

@@ -1,0 +1,71 @@
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "config/self_block.list"
+
+[[rulesets]]
+group = "🚀 节点选择"
+ruleset = "config/self_proxy.list"
+
+[[rulesets]]
+group = "🚀 节点选择"
+ruleset = "acl4ssr/ProxyGFWlist.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "config/self_direct.list"
+
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "acl4ssr/BanAD.list"
+
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "acl4ssr/BanEasyList.list"
+
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "acl4ssr/BanEasyListChina.list"
+
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "acl4ssr/BanEasyPrivacy.list"
+
+[[rulesets]]
+group = "🛑 全球拦截"
+ruleset = "acl4ssr/BanProgramAD.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/LocalAreaNetwork.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/GoogleCN.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/Ruleset/SteamCN.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/ChinaIp.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/ChinaDomain.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "acl4ssr/ChinaCompanyIp.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "[]GEOIP,LAN"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "[]GEOIP,CN"
+
+[[rulesets]]
+group = "🐟 漏网之鱼"
+ruleset = "[]FINAL"

@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/clash",
+      "destination": "https://gist.githubusercontent.com/<user_name>/<gist_id>/raw/clash.yaml"
+    },
+    {
+      "source": "/quanx",
+      "destination": "https://gist.githubusercontent.com/<user_name>/<gist_id>/raw/quanx.yaml"
+    },
+    {
+      "source": "/surfboard",
+      "destination": "https://gist.githubusercontent.com/<user_name>/<gist_id>/raw/surfboard.yaml"
+    }
+  ]
+}

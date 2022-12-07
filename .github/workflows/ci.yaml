@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      max-parallel: 1
+      matrix:
+        type: ["clash", "surfboard", "quanx"]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Build subconverter
+        run: docker build -t subconverter-runner:latest .
+      - name: Run subconverter
+        run: docker run -d --name subconverter --restart=always -p 25500:25500 --network=host subconverter-runner:latest
+      - name: Wait for container
+        run: |
+          while ! curl http://localhost:25500/version
+          do
+            echo "$(date) - still trying"
+            sleep 1
+          done
+          echo "$(date) - connected successfully"
+
+      - name: Build ${{ matrix.type }}
+        run: curl -o ${{ matrix.type }}.yaml "http://localhost:25500/getprofile?name=profiles/${{ matrix.type }}.ini&token=password"
+      - name: Check yaml
+        run: |
+          SIZE=`wc -c ${{ matrix.type }}.yaml  | awk '{print $1}'`
+          if [ $SIZE -lt 10 ]
+          then
+              echo "${{ matrix.type }}.yaml only has ${SIZE} lines, exit"
+              exit 1
+          else
+              echo "${{ matrix.type }}.yaml has ${SIZE} lines, continue"
+          fi
+      - name: Docker logs in End
+        run: docker logs subconverter
+
+      - name: Deploy
+        uses: exuanbo/actions-deploy-gist@v1
+        with:
+          token: ${{ secrets.TOKEN }}
+          gist_id: <your_gist>
+          file_path: ${{ matrix.type }}.yaml
